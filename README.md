@@ -14,3 +14,13 @@ Raw read files for RNA-seq of the Cadenza and Kronos EMS-mutagenised lines can b
 - **Identify differentially expressed genes in the mutagenised lines**: differential_expression_DESeq2_all_contrasts.R
 
 ### Variant Calling
+- **Trim reads**: trim.pl
+- **Map reads to Chinese Spring reference genome**: hisat.pl, requires the Chinese Spring reference genome available [here]()
+- **Call variants**: call_variants_by_chrom.pl
+- **Predict variant effects**: vep.sh
+- **Filter variants to keep only PTC variants or synonymous variants**: vep_filter_PTC.sh *or* vep_filter_synonymous.sh
+- **Create lists of genes in diads or triads**:
+- **Further filtering to keep variants that are homozygous mutant in at least one of the EMS-mutagenised lines, affect canonical transcripts, and are in a diad/triad**: vep_output_filtering_PTC.R *or* vep_output_filtering_synonymous.R
+
+### Combine Differential Expression and Variant Calling
+- **Identify potential homoeologous transcriptional compensation associated with PTC or synonymous mutations and plot**: up_down_regulated_homoeologues_PTC.R *or* up_down_regulated_homoeologues_synonymous.R
