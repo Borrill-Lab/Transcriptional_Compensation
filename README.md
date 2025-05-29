@@ -4,6 +4,8 @@
 Raw read files for RNA-seq of the Cadenza and Kronos EMS-mutagenised lines can be found in the ENA under project PRJEB89501.
 
 ## Analysis of RNA-seq Data
+The same pipeline was used for the Cadenza lines (scripts [here]()), Kronos lines (scripts [here]()), and the EMS-mutagenised lines from Xiong et al. (2020) (scripts [here]()). 
+
 ### Preparing Reference Transcriptome (Kronos only)
 - **Filter Chinese Spring reference transcriptome to remove D-subgenome transcripts**: filter_reference_fasta.sh, requires the Chinese Spring reference transcriptome available [here]()
 - **Prepare kallisto index**: kallisto_index.sh
@@ -19,7 +21,7 @@ Raw read files for RNA-seq of the Cadenza and Kronos EMS-mutagenised lines can b
 - **Call variants**: call_variants_by_chrom.pl
 - **Predict variant effects**: vep.sh
 - **Filter variants to keep only PTC variants or synonymous variants**: vep_filter_PTC.sh *or* vep_filter_synonymous.sh
-- **Create lists of genes in diads or triads**:
+- **Create lists of genes in diads or triads**: genes_in_diads_triads.R
 - **Further filtering to keep variants that are homozygous mutant in at least one of the EMS-mutagenised lines, affect canonical transcripts, and are in a diad/triad**: vep_output_filtering_PTC.R *or* vep_output_filtering_synonymous.R
 
 ### Combine Differential Expression and Variant Calling
