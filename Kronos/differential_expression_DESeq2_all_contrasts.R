@@ -51,7 +51,7 @@ samples_batch1$Type <- factor(samples_batch1$Type)
 all(rownames(samples_batch1) == colnames(counts_batch1))
 
 ##DESeq2 Analysis
-dds1 <- DESeqDataSetFromMatrix(countData=round(counts_batch1), colData=samples_batch1, design=~Genotype) #check if it is ok to round counts here!
+dds1 <- DESeqDataSetFromMatrix(countData=round(counts_batch1), colData=samples_batch1, design=~Genotype)
 dds1$Type <- relevel(dds1$Genotype,"KWT") #Sets WT as reference level
 dds1 <- DESeq(dds1)
 
