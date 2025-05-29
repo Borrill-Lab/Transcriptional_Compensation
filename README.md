@@ -4,7 +4,7 @@
 Raw read files for RNA-seq of the Cadenza and Kronos EMS-mutagenised lines can be found in the ENA under project PRJEB89501.
 
 ## Analysis of RNA-seq Data
-The same pipeline was used for the Cadenza lines (scripts [here]()), Kronos lines (scripts [here]()), and the EMS-mutagenised lines from Xiong et al. (2020) (scripts [here]()). 
+The same pipeline was used for the Cadenza lines (scripts [here]()), Kronos lines (scripts [here](https://github.com/Borrill-Lab/Transcriptional_Compensation/tree/main/Kronos)), and the EMS-mutagenised lines from Xiong et al. (2020) (scripts [here]()). 
 
 ### Preparing Reference Transcriptome (Kronos only)
 - **Filter Chinese Spring reference transcriptome to remove D-subgenome transcripts**: filter_reference_fasta.sh, requires the Chinese Spring reference transcriptome available [here]()
